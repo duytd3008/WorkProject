@@ -68,8 +68,8 @@ WITH TABLE_1 AS (
       ),
       TABLE_MERGE_2 AS (
         SELECT month_M, client_id, nhom_KH, StreakDuration, Cond_1_status, 
-        (select round(avg(Estimate), 2) 
-        from unnest([Month_sub_1_RR, Month_sub_2_RR, Month_sub_3_RR]) Estimate
+        (select round(avg(avg_value), 2) 
+        from unnest([Month_sub_1_RR, Month_sub_2_RR, Month_sub_3_RR]) avg_value
         ) as AVG_RR
         FROM TABLE_MERGE_1
 
