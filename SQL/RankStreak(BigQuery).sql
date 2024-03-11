@@ -83,7 +83,6 @@ WITH TABLE_1 AS (
         WHEN AVG_RR >= 80 AND AVG_RR < 90 then 'Group3'
         WHEN AVG_RR < 80 then 'Group4'
         END
-        
         ) AS Cond_2_status
          FROM TABLE_MERGE_2
       ),
