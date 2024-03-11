@@ -2,7 +2,7 @@ WITH TABLE_1 AS (
         SELECT month_M, client_id, nhom_KH, revenue_M1_per_revenue_M  FROM `ad_hoc.IDKH_PercentageRevenue`
         WHERE nhom_KH like 'A%' AND
         month_M BETWEEN (SELECT DATE_SUB(MAX(month_M), INTERVAL 11 month) FROM `ad_hoc.IDKH_PercentageRevenue`)
-        AND (SELECT MAX(month_M) FROM `ghn-cxcscc.ad_hoc.IDKH_PercentageRevenue`)
+        AND (SELECT MAX(month_M) FROM `ad_hoc.IDKH_PercentageRevenue`)
       ),
       TABLE_2 AS (
         SELECT L.*,
